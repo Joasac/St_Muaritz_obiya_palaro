@@ -348,3 +348,14 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".mobile-menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    toggleBtn.addEventListener("click", function () {
+      navMenu.classList.toggle("active"); // Toggle menu open/close
+      toggleBtn.classList.toggle("open"); // Animate hamburger
+    });
+  });

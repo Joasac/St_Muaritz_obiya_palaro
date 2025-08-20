@@ -13,7 +13,6 @@
     --text-dark: #1f2937;
     --text-gray: #6b7280;
     --text-light: #9ca3af;
-    --black: #000000;
     --white: #ffffff;
     --blue-50: #eff6ff;
     --blue-100: #dbeafe;
@@ -1205,6 +1204,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 

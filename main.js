@@ -165,6 +165,11 @@ function initializeMobileMenu() {
         });
     }
 }
+// ✅ Call functions after DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+    initializeNavigation();
+    initializeMobileMenu();
+});
 
 // Scroll effects and animations
 function initializeScrollEffects() {
@@ -359,3 +364,4 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleBtn.classList.toggle("open"); // Animate hamburger
     });
   });
+

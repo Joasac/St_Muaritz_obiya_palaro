@@ -13,7 +13,7 @@
     --text-dark: #1f2937;
     --text-gray: #6b7280;
     --text-light: #9ca3af;
-    --white: #ffffff;
+    --black: #000000;
     --blue-50: #eff6ff;
     --blue-100: #dbeafe;
     --amber-50: #fffbeb;
@@ -516,7 +516,7 @@ body {
 .footer-section h4 {
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 .footer-section p {
@@ -1204,6 +1204,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 

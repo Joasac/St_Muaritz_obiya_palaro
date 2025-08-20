@@ -165,8 +165,13 @@ body {
     transform: translateY(0);
 }
 
-.dropdown-menu li {
-    margin: 0;
+.dropdown-menu li { margin: 0; }
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-menu a {
@@ -1231,6 +1236,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. MAURITZ OBIYA PALARO</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!--styling-->
+    <meta name="description" content="St. Moritz Catholic Church Organization offering health center, education, youth ministry, agriculture, and community services in Uganda.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="log.png" alt="Logo" class="logo"> 
+                    </div>
+                    <div class="logo-text">
+                        <h1>St.MAURITZ OBIYA PALARO</h1>
+                        <p>Catholic Church Organization</p>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about-us.html" class="nav-link">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Services <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="health-center.html">Health Center</a></li>
+                                <li><a href="primary-school.html">Primary School</a></li>
+                                <li><a href="youth.html">Youth Ministry</a></li>
+                                <li><a href="agriculture.html">Agriculture</a></li>
+                                <li><a href="nursery.html">Nursery</a></li>
+                                <li><a href="education-sponsorship.html">Education Sponsorship</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="library.html">Library</a></li>
+                                <li><a href="communication.html">Communication/ICT</a></li>
+                                <li><a href="volunteers.html">Volunteers</a></li>
+                                <li><a href="pastoral.html">Pastoral Care</a></li>
+                                <li><a href="brass-band.html">Brass Band</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Slider -->
+    <section class="hero-section">
+        <div class="video-slider">
+            <div class="slide active">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1200&h=600&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2>Sunday Service Highlights</h2>
+                    <p>Join us for inspiring worship and fellowship</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=600&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2>Youth Ministry Activities</h2>
+                    <p>Young people growing in faith together</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1200&h=600&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2>Community Outreach</h2>
+                    <p>Serving our neighbors with love and compassion</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=600&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2>Health Center Care</h2>
+                    <p>Providing quality healthcare to our community</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next-btn" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="container">
+                <h1>Welcome to <span class="highlight">St. Moritz</span></h1>
+                <p id="hero-description">Join us for inspiring worship and fellowship</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary">Join Our Community</a>
+                    <a href="videos.html" class="btn btn-outline">
+                        <i class="fas fa-play"></i> Watch Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Mission Statement -->
+    <section id="mission" class="mission-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>St.Mauritz Obiya Palaro is committed to building a stronger community through faith, education, healthcare, and social services. We believe in the transformative power of love, service, and dedication to improving the lives of all people, regardless of background or circumstance.</p>
+        </div>
+    </section>
+
+    <!-- Ministry Sections -->
+    <section class="ministries-section">
+        <div class="container">
+            <h2>Our Ministries & Services</h2>
+            <div class="ministries-grid">
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Health Center</h3>
+                    <p>Comprehensive healthcare services for our community</p>
+                    <a href="health-center.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Primary School</h3>
+                    <p>Quality education foundation for young minds</p>
+                    <a href="primary-school.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Youth Ministry</h3>
+                    <p>Empowering the next generation through faith and fellowship</p>
+                    <a href="youth.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Agriculture</h3>
+                    <p>Sustainable farming and food security initiatives</p>
+                    <a href="agriculture.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Nursery</h3>
+                    <p>Early childhood development and care</p>
+                    <a href="nursery.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Education Sponsorship</h3>
+                    <p>Supporting students through educational funding</p>
+                    <a href="education-sponsorship.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <h3>Events</h3>
+                    <p>Community gatherings and spiritual celebrations</p>
+                    <a href="events.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Library</h3>
+                    <p>Knowledge center and learning resources</p>
+                    <a href="library.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Communication/ICT</h3>
+                    <p>Technology services and digital connectivity</p>
+                    <a href="communication.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteers</h3>
+                    <p>Join our mission through service to others</p>
+                    <a href="volunteers.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3>Pastoral Care</h3>
+                    <p>Spiritual guidance and community support</p>
+                    <a href="pastoral.html" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Brass Band</h3>
+                    <p>Musical ministry and worship excellence</p>
+                    <a href="brass-band.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="log.png" alt="Logo" class="logo"> 
+                        </div>
+                        <h3>St.MAURITZ OBIYA PALARO</h3>
+                    </div>
+                    <p>Building stronger communities through faith, service, and love.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="volunteers.html">Volunteer</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i>St. MAURITZ OBIYA PALARO, Uganda</p>
+                        <p><i class="fas fa-phone"></i> +256 392993428</p>
+                        <p><i class="fas fa-envelope"></i> info@stmauritz.org</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 St. MAURITZ OBIYA PALARO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

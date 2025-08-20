@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - St. Moritz Catholic Church</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description" content="Get in touch with St. Moritz Catholic Church. Contact information, location, and inquiry form.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="log.png" alt="Logo" class="logo"> 
+                    </div>
+                    <div class="logo-text">
+                        <h1>St.MAURITZ OBIYA PALARO</h1>
+                        <p>Catholic Church Organization</p>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about-us.html" class="nav-link">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Services <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="health-center.html">Health Center</a></li>
+                                <li><a href="primary-school.html">Primary School</a></li>
+                                <li><a href="youth.html">Youth Ministry</a></li>
+                                <li><a href="agriculture.html">Agriculture</a></li>
+                                <li><a href="nursery.html">Nursery</a></li>
+                                <li><a href="education-sponsorship.html">Education Sponsorship</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="library.html">Library</a></li>
+                                <li><a href="communication.html">Communication/ICT</a></li>
+                                <li><a href="volunteers.html">Volunteers</a></li>
+                                <li><a href="pastoral.html">Pastoral Care</a></li>
+                                <li><a href="brass-band.html">Brass Band</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero-section">
+        <div class="video-slider">
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('contact.jpg')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2>Contact Us - St Moritz</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+             <div class="container">
+                <div style="margin-bottom: 2rem;">
+                    <i class="fas fa-envelope" style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.9;"></i>
+                </div>
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container" style="padding: 2rem 0;">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+
+    <!-- Contact Information -->
+    <section class="content-section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="content-card" style="text-align: center;">
+                    <div style="width: 4rem; height: 4rem; background: rgba(15, 60, 201, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: var(--primary-color);">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>St. Moritz Parish<br>
+                    Main Street, Kampala<br>
+                    Uganda</p>
+                </div>
+
+                <div class="content-card" style="text-align: center;">
+                    <div style="width: 4rem; height: 4rem; background: rgba(15, 60, 201, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: var(--primary-color);">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Main Office: +256 XXX XXX XXX<br>
+                    Emergency: +256 XXX XXX XXX</p>
+                </div>
+
+                <div class="content-card" style="text-align: center;">
+                    <div style="width: 4rem; height: 4rem; background: rgba(15, 60, 201, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: var(--primary-color);">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>General: info@stmoritz.org<br>
+                    Pastor: pastor@stmoritz.org</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Send us a Message</h2>
+                <form id="contactForm" class="contact-form" action="contact-handler.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ministry">Interested Ministry</label>
+                        <select id="ministry" name="ministry">
+                            <option value="">Select a ministry</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="health-center">Health Center</option>
+                            <option value="primary-school">Primary School</option>
+                            <option value="youth">Youth Ministry</option>
+                            <option value="agriculture">Agriculture</option>
+                            <option value="nursery">Nursery</option>
+                            <option value="education-sponsorship">Education Sponsorship</option>
+                            <option value="events">Events</option>
+                            <option value="library">Library</option>
+                            <option value="communication">Communication/ICT</option>
+                            <option value="volunteers">Volunteers</option>
+                            <option value="pastoral">Pastoral Care</option>
+                            <option value="brass-band">Brass Band</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Please tell us how we can help you..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Times -->
+    <section class="content-section" style="background: var(--blue-50);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Service Times</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div class="content-card" style="text-align: center;">
+                    <h3>Sunday Services</h3>
+                    <p><strong>Morning Mass:</strong> 7:00 AM<br>
+                    <strong>Main Service:</strong> 10:00 AM<br>
+                    <strong>Evening Service:</strong> 6:00 PM</p>
+                </div>
+
+                <div class="content-card" style="text-align: center;">
+                    <h3>Weekday Mass</h3>
+                    <p><strong>Monday - Friday:</strong> 6:30 AM<br>
+                    <strong>Saturday:</strong> 7:00 AM</p>
+                </div>
+
+                <div class="content-card" style="text-align: center;">
+                    <h3>Special Services</h3>
+                    <p><strong>Bible Study:</strong> Wednesday 7:00 PM<br>
+                    <strong>Prayer Meeting:</strong> Friday 7:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="log.png" alt="Logo" class="logo"> 
+                        </div>
+                        <h3>St.MAURITZ OBIYA PALARO</h3>
+                    </div>
+                    <p>Building stronger communities through faith, service, and love.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="volunteers.html">Volunteer</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i>St. MAURITZ OBIYA PALARO, Uganda</p>
+                        <p><i class="fas fa-phone"></i> +256 392993428</p>
+                        <p><i class="fas fa-envelope"></i> info@stmauritz.org</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 St. MAURITZ OBIYA PALARO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

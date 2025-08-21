@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'isaac.opolot2000@gmail.com'; // your Gmail
-        $mail->Password   = 'hpls ohhz fusz uudo';        // your App password
+        $mail->Password   = 'jlch fbvv zpsi xcjr';        // your App password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
@@ -65,3 +65,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     header("Location: contact.html?popup=❌ Invalid request.");
     exit;
 }
+

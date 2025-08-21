@@ -215,7 +215,8 @@ function initializeScrollEffects() {
     });
 }
 
-// Contact form functionality
+// Contact form functionality           
+  
 function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
     
@@ -233,7 +234,7 @@ function initializeContactForm() {
             submitBtn.disabled = true;
             
             // Send form data to PHP handler
-            fetch('contact_handler.php', {
+            fetch("contact_handler.php", {
                 method: 'POST',
                 body: formData
             })
@@ -362,6 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleBtn.classList.toggle("open"); // Animate hamburger
     });
   });
+
 
 
 

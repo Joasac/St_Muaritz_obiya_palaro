@@ -5,13 +5,15 @@ ini_set('display_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load PHPMailer
 require 'PHPMailer.php';
 require 'SMTP.php';
 require 'Exception.php';
 
+header('Content-Type: application/json'); // <-- important for fetch()
+
+$response = ["success" => false, "message" => "Something went wrong."];
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Collect form inputs
     $name      = htmlspecialchars($_POST['name']);
     $email     = htmlspecialchars($_POST['email']);
     $phone     = htmlspecialchars($_POST['phone']);
@@ -26,14 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'isaac.opolot2000@gmail.com'; // your Gmail
-        $mail->Password   = 'jlch fbvv zpsi xcjr';        // your App password
+        $mail->Username   = 'isaac.opolot2000@gmail.com';
+        $mail->Password   = 'jlch fbvv zpsi xcjr';  // Gmail App password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Email settings
-        $mail->setFrom($email, $name); 
-        $mail->addAddress('isaac.opolot2000@gmail.com'); // where the email will be sent
+        $mail->setFrom('isaac.opolot2000@gmail.com', 'Website Contact Form'); 
+        $mail->addReplyTo($email, $name);
+        $mail->addAddress('isaac.opolot2000@gmail.com'); 
 
         $mail->isHTML(true);
         $mail->Subject = "Contact Form: " . $subject;
@@ -45,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p><strong>Ministry:</strong> {$ministry}</p>
             <p><strong>Message:</strong><br>{$message}</p>
         ";
-
         $mail->AltBody = "New Contact Form Submission\n\n
             Name: {$name}\n
             Email: {$email}\n
@@ -55,15 +57,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ";
 
         $mail->send();
-        header("Location: contact.html?popup=✅ Message sent successfully!");
-        exit;
+        $response = ["success" => true, "message" => "✅ Message sent successfully!"];
     } catch (Exception $e) {
-        header("Location: contact.html?popup=❌ Message failed. {$mail->ErrorInfo}");
-        exit;
+        $response = ["success" => false, "message" => "❌ Message failed. {$mail->ErrorInfo}"];
     }
 } else {
-    header("Location: contact.html?popup=❌ Invalid request.");
-    exit;
+    $response = ["success" => false, "message" => "❌ Invalid request."];
 }
 
-
+echo json_encode($response);
+exit;
+?>

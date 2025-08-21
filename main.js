@@ -116,20 +116,7 @@ function initializeNavigation() {
       }
     });
 
-    // Mobile: toggle class .open
-    toggle.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        e.stopPropagation();
-        // Close other open dropdowns
-        document.querySelectorAll('.dropdown.open').forEach(d => {
-          if (d !== dropdown) d.classList.remove('open');
-        });
-        dropdown.classList.toggle('open');
-      }
-    });
-  });
-
+      
   // Click outside closes on mobile
   document.addEventListener('click', (e) => {
     if (window.innerWidth <= 768 && !e.target.closest('.dropdown')) {
@@ -360,5 +347,6 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleBtn.classList.toggle("open"); // Animate hamburger
     });
   });
+
 
 

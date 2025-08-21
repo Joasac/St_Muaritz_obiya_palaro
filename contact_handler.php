@@ -9,9 +9,7 @@ require 'PHPMailer.php';
 require 'SMTP.php';
 require 'Exception.php';
 
-header('Content-Type: application/json'); // <-- important for fetch()
-
-$response = ["success" => false, "message" => "Something went wrong."];
+header('Content-Type: application/json'); // tell JS it's JSON
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name      = htmlspecialchars($_POST['name']);
@@ -24,19 +22,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // SMTP configuration
+        // SMTP settings
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'isaac.opolot2000@gmail.com';
-        $mail->Password   = 'jlch fbvv zpsi xcjr';  // Gmail App password
+        $mail->Username   = 'isaac.opolot2000@gmail.com'; 
+        $mail->Password   = 'jlch fbvv zpsi xcjr'; // Gmail App password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        // Email settings
-        $mail->setFrom('isaac.opolot2000@gmail.com', 'Website Contact Form'); 
-        $mail->addReplyTo($email, $name);
-        $mail->addAddress('isaac.opolot2000@gmail.com'); 
+        // Email content
+        $mail->setFrom($email, $name);
+        $mail->addAddress('isaac.opolot2000@gmail.com');
 
         $mail->isHTML(true);
         $mail->Subject = "Contact Form: " . $subject;
@@ -48,23 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p><strong>Ministry:</strong> {$ministry}</p>
             <p><strong>Message:</strong><br>{$message}</p>
         ";
-        $mail->AltBody = "New Contact Form Submission\n\n
-            Name: {$name}\n
-            Email: {$email}\n
-            Phone: {$phone}\n
-            Ministry: {$ministry}\n
-            Message: {$message}
-        ";
 
         $mail->send();
-        $response = ["success" => true, "message" => "✅ Message sent successfully!"];
+
+        echo json_encode(["success" => true, "message" => "Message sent successfully!"]);
     } catch (Exception $e) {
-        $response = ["success" => false, "message" => "❌ Message failed. {$mail->ErrorInfo}"];
+        echo json_encode(["success" => false, "message" => "Mailer Error: {$mail->ErrorInfo}"]);
     }
 } else {
-    $response = ["success" => false, "message" => "❌ Invalid request."];
+    echo json_encode(["success" => false, "message" => "Invalid request."]);
 }
-
-echo json_encode($response);
-exit;
-?>

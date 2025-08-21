@@ -238,23 +238,27 @@ function initializeContactForm() {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => response.text())
+            .then(text => {                                                          
+                try {
+                    return JSON.parse(text);
+                } catch (err) {
+                    throw new Error("Invalid JSON: " + text);
+                }
+            })
             .then(data => {
                 if (data.success) {
                     showMessage('Thank you! Your message has been sent successfully.', 'success');
                     contactForm.reset();
                 } else {
-                    showMessage(data.message || 'There was an error sending your message. Please try again.', 'error');
+                    showMessage(data.message || 'There was an error sending your message.', 'error');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 showMessage('There was an error sending your message. Please try again.', 'error');
             })
-            .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
+
         });
     }
 }
@@ -363,6 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleBtn.classList.toggle("open"); // Animate hamburger
     });
   });
+
 
 
 
